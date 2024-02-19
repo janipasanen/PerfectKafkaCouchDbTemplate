@@ -19,6 +19,7 @@
 
 import PerfectHTTP
 import PerfectHTTPServer
+import PerfectKafka
 
 // An example request handler.
 // This 'handler' function can be referenced directly in the configuration below.
@@ -45,3 +46,7 @@ try HTTPServer.launch(name: "localhost",
 					  responseFilters: [
 						(PerfectHTTPServer.HTTPFilter.contentCompression(data: [:]), HTTPFilterPriority.high)])
 
+
+//MARK: Kafka
+let conf = try Kafka.Config()
+let topicConf = try Kafka.TopicConfig()
