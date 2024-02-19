@@ -3,14 +3,14 @@
 import PackageDescription
 
 let package = Package(
-	name: "PerfectTemplate",
+	name: "PerfectKafkaCouchDbTemplate",
 	products: [
-		.executable(name: "PerfectTemplate", targets: ["PerfectTemplate"])
+		.executable(name: "PerfectKafkaCouchDbTemplate", targets: ["PerfectKafkaCouchDbTemplate"])
 	],
 	dependencies: [
 		.package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "3.0.0"),
 	],
 	targets: [
-		.target(name: "PerfectTemplate", dependencies: ["PerfectHTTPServer"])
+		.target(name: "PerfectKafkaCouchDbTemplate", dependencies: ["PerfectHTTPServer"])
 	]
 )
